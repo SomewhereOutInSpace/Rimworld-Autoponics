@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Autoponics</name>
+  <author>SomewhereOutInSpace</author>
+  <supportedVersions>
+    <li>1.1</li>
+  </supportedVersions>
+  <packageId>SomewhereOutInSpace.Rimworld.AutoPonics</packageId>
+  <description>V1.1 COMPATIBLE!
+    Adds an advanced hydroponics basin that automatically sows and harvests its crop. Requires 90 steel, 10 plasteel, and 2 advanced components to construct. Consumes 140 watts when powered. Fertility and light requirement is identical to that of a standard hydroponics basin.\n\nNote that if the desired crop is changed, it must be manually cut. Otherwise, the basin will wait until the current crop is auto-harvested to begin producing the new crop.
+  </description>
+</ModMetaData>
