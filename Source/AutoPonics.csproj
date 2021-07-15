@@ -52,6 +52,8 @@
   <ItemGroup>
     <Compile Include="Building_AutoPlantGrower.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WorkGiver_AutoGrower.cs" />
+    <Compile Include="WorkGiver_AutoGrowerSow.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

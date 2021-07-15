@@ -144,30 +144,30 @@ namespace AutoPonics {
             for (int j = 0; j < thingList.Count; j++)
             {
                 Thing thing3 = thingList[j];
-                if (!thing3.def.BlockPlanting)
+                if (thing3.def.BlocksPlanting())
                 {
-                    continue;
-                }
-                Pawn p = pawn;
-                LocalTargetInfo target = thing3;
-                bool ignoreOtherReservations = forced;
-                if (!p.CanReserve(target, 1, -1, null, ignoreOtherReservations))
-                {
-                    return null;
-                }
-                if (thing3.def.category == ThingCategory.Plant)
-                {
-                    if (!thing3.IsForbidden(pawn))
+                    Pawn p = pawn;
+                    LocalTargetInfo target = thing3;
+                    bool ignoreOtherReservations = forced;
+                    if (!p.CanReserve(target, 1, -1, null, ignoreOtherReservations))
                     {
-                        return new Job(JobDefOf.CutPlant, thing3);
+                        return null;
+                    }
+                    if (thing3.def.category == ThingCategory.Plant)
+                    {
+                        if (!thing3.IsForbidden(pawn))
+                        {
+                            return new Job(JobDefOf.CutPlant, thing3);
+                        }
+                        return null;
+                    }
+                    if (thing3.def.EverHaulable)
+                    {
+                        return HaulAIUtility.HaulAsideJobFor(pawn, thing3);
                     }
                     return null;
                 }
-                if (thing3.def.EverHaulable)
-                {
-                    return HaulAIUtility.HaulAsideJobFor(pawn, thing3);
-                }
-                return null;
+                continue;
             }
             if (WorkGiver_AutoGrower.wantedPlantDef.CanEverPlantAt(c, map) && PlantUtility.GrowthSeasonNow(c, map, forSowing: true))
             {

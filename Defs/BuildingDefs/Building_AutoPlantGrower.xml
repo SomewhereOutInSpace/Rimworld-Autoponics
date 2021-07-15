@@ -35,7 +35,7 @@
     <costList>
       <Steel>90</Steel>
       <Plasteel>10</Plasteel>
-      <ComponentSpacer>2</ComponentSpacer>
+      <ComponentSpacer>1</ComponentSpacer>
     </costList>
     <fertility>2.8</fertility>
     <building>
